@@ -1,0 +1,27 @@
+# import csv
+# from datetime import datetime
+from pathlib import Path
+
+
+# status_dict = {
+#     'Active': 31, 'Withdrawn': 55, 'Superseded': 20, 'Final': 269, 'Rejected': 120, 'Deferred': 37, 'Accepted': 46, 'Draft': 29, 'April Fool!': 1
+# }
+
+# # status_summary_2029-01-31_23-55-00.csv
+# # date_example = datetime.now()
+# date_example = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+# filename = f'status_summary_{date_example}.csv'
+
+# with open(filename, 'w', newline='') as csvfile:
+#     fieldnames = ['status', 'qty']
+#     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+#     total_sum = sum(status_dict.values())
+#     writer.writeheader()
+#     for status, qty in status_dict.items():
+#         writer.writerow({'status': status, 'qty': qty})
+#     writer.writerow({'status': 'Total', 'qty': total_sum})
+        
+
+
+# BASE_DIR = Path(__file__).parent.parent
+# print(BASE_DIR)
