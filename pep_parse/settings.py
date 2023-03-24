@@ -1,16 +1,14 @@
-
 from pathlib import Path
 
 BOT_NAME = 'pep_parse'
 
 SPIDER_MODULES = ['pep_parse.spiders']
 NEWSPIDER_MODULE = 'pep_parse.spiders'
-
-
 ROBOTSTXT_OBEY = True
+
+
 BASE_DIR = Path(__file__).parent.parent
 RESULTS = 'results'
-RESULTS_DIR = BASE_DIR / RESULTS
 NUMBER = 'number'
 NAME = 'name'
 STATUS = 'status'
@@ -26,7 +24,6 @@ FEEDS = {
         'overwrite': True,
     },
 }
-
 ITEM_PIPELINES = {
     'pep_parse.pipelines.PepParsePipeline': 300,
 }
