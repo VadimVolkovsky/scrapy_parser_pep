@@ -1,7 +1,7 @@
 import scrapy
 
 from pep_parse.items import PepParseItem
-from pep_parse.settings import NUMBER, STATUS, NAME
+from pep_parse.settings import NAME, NUMBER, STATUS
 
 
 class PepSpider(scrapy.Spider):

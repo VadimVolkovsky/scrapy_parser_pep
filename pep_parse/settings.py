@@ -30,9 +30,3 @@ FEEDS = {
 ITEM_PIPELINES = {
     'pep_parse.pipelines.PepParsePipeline': 300,
 }
-
-# FEED_EXPORT_FIELDS = {
-#     NUMBER: 'Номер',
-#     NAME: 'Название',
-#     STATUS: 'Статус',
-# }

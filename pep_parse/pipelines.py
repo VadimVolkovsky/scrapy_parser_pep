@@ -1,14 +1,12 @@
 import csv
 from datetime import datetime
 
-from pep_parse.settings import (BASE_DIR, DT_FORMAT, QTY, RESULTS, STATUS,
+from pep_parse.settings import (DT_FORMAT, QTY, RESULTS, STATUS,
                                 STATUS_SUMMARY, TOTAL)
 
 
 class PepParsePipeline:
     def __init__(self):
-        # self.results_dir = BASE_DIR / RESULTS
-        # self.results_dir.mkdir(exist_ok=True)
         self.status_dict = {}
 
     def open_spider(self, spider):
