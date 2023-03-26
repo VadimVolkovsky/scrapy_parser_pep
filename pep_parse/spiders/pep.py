@@ -1,15 +1,16 @@
 import scrapy
 
 from pep_parse.items import PepParseItem
-from pep_parse.settings import NAME, NUMBER, STATUS
+from pep_parse.settings import NAME, NUMBER, STATUS, ALLOWED_DOMAINS
 
 
 class PepSpider(scrapy.Spider):
     name = 'pep'
-    allowed_domains = ['peps.python.org']
-    start_urls = ['https://peps.python.org/']
+    allowed_domains = ALLOWED_DOMAINS
+    start_urls = [f'https://{domain}/' for domain in allowed_domains]
 
     def parse(self, response):
+        """Собирает информацию об URL-адресах всех PEP"""
         pep_list = response.css(
             '#numerical-index table.pep-zero-table tbody tr'
         )
@@ -18,6 +19,7 @@ class PepSpider(scrapy.Spider):
             yield response.follow(pep_link, callback=self.parse_pep)
 
     def parse_pep(self, response):
+        """Собирает информацию со страницы конкретного PEP"""
         h1 = response.css('#pep-content > h1::text').get().split()
         number = h1[1]
         name = ' '.join(h1[3:])

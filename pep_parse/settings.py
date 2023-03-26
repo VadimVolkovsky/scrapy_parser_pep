@@ -6,7 +6,9 @@ SPIDER_MODULES = ['pep_parse.spiders']
 NEWSPIDER_MODULE = 'pep_parse.spiders'
 ROBOTSTXT_OBEY = True
 
-
+ALLOWED_DOMAINS = [
+    'peps.python.org',
+]
 BASE_DIR = Path(__file__).parent.parent
 RESULTS = 'results'
 NUMBER = 'number'

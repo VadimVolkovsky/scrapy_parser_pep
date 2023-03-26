@@ -2,10 +2,10 @@ status,qty
 Active,31
 Withdrawn,55
 Final,269
-Rejected,120
 Superseded,20
 Accepted,46
-Deferred,37
+Rejected,120
 Draft,29
+Deferred,37
 April Fool!,1
 Total,608

@@ -26,13 +26,7 @@ class PepParseSpiderMiddleware:
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
-class PepParseDownloaderMiddleware:
-    @classmethod
-    def from_crawler(cls, crawler):
-        s = cls()
-        crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)
-        return s
-
+class PepParseDownloaderMiddleware(PepParseSpiderMiddleware):
     def process_request(self, request, spider):
         return None
 
@@ -41,6 +35,3 @@ class PepParseDownloaderMiddleware:
 
     def process_exception(self, request, exception, spider):
         pass
-
-    def spider_opened(self, spider):
-        spider.logger.info('Spider opened: %s' % spider.name)
