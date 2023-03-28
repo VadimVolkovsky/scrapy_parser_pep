@@ -43,7 +43,7 @@ scrapy crawl pep
 
 **Технологии:**
 - Python 3.9
-- Scrapy
+- BeautifulSoup4
 
 ### Автор проекта:
 
